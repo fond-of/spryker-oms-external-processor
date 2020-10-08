@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="ExternalProcessingRequests">
+        <property name="requests" singular="request" type="ExternalProcessingRequest[]" />
+    </transfer>
+
+    <transfer name="ExternalProcessingRequest">
+        <property name="processorName" type="string" />
+    </transfer>
+
+    <transfer name="ExternalProcessingResponses">
+        <property name="responses" singular="response" type="ExternalProcessingResponse[]" />
+    </transfer>
+
+    <transfer name="ExternalProcessingResponse">
+        <property name="processorName" type="string" />
+        <property name="status" type="string" />
+        <property name="error" type="string" />
+        <property name="errorTraceAsString" type="string" />
+    </transfer>
+</transfers>
