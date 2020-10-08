@@ -15,10 +15,16 @@
         <property name="responses" singular="response" type="ExternalProcessingResponse[]" />
     </transfer>
 
+    <transfer name="ExternalProcessingOrder">
+        <property name="orderId" type="int" />
+        <property name="orderReference" type="string" />
+        <property name="error" type="string" />
+        <property name="success" type="bool" />
+    </transfer>
+
     <transfer name="ExternalProcessingResponse">
         <property name="processorName" type="string" />
-        <property name="status" type="string" />
-        <property name="error" type="string" />
-        <property name="errorTraceAsString" type="string" />
+        <property name="processedOrders" singular="processedOrder" type="ExternalProcessingOrder[]" />
+        <property name="failedOrders" singular="failedOrder" type="ExternalProcessingOrder[]" />
     </transfer>
 </transfers>
