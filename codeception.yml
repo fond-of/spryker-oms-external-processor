@@ -24,3 +24,5 @@ coverage:
 modules:
   enabled:
     - \FondOfCodeception\Module\Spryker
+#    - \SprykerTest\Shared\Testify\Helper\Environment
+#    - \SprykerTest\Shared\Testify\Helper\ConfigHelper

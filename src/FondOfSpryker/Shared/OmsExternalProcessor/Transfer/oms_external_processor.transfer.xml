@@ -24,6 +24,9 @@
 
     <transfer name="ExternalProcessingResponse">
         <property name="processorName" type="string" />
+        <property name="success" type="bool" />
+        <property name="error" type="string" />
+        <property name="errorTrace" type="string" />
         <property name="processedOrders" singular="processedOrder" type="ExternalProcessingOrder[]" />
         <property name="failedOrders" singular="failedOrder" type="ExternalProcessingOrder[]" />
     </transfer>
